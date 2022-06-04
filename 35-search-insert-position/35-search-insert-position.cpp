@@ -3,14 +3,14 @@ public:
     int searchInsert(vector<int>& nums, int target) {
         int start=0;
         int end =nums.size()-1;
-
+       
         while(start<=end){
              int mid = start + (end-start)/2;
-            if(nums[mid]==target){
+            if(target==nums[mid]){
                  return mid;
             }
                
-            if (nums[mid]<target)
+            if (target>nums[mid])
             {
                 start=mid+1;
             }
